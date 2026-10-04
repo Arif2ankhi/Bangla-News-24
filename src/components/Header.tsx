@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import NavLinks from "./NavLinks";
+import Userinfo from "./Userinfo";
 
 //   console.log(date);
 const Header = () => {
@@ -36,7 +37,7 @@ const Header = () => {
           
 
           {/* Authentication */}
-          <div className="flex items-center gap-5">
+          {/* <div className="flex items-center gap-5">
             <button className="text-sm text-gray-700 hover:text-red-600">
               সাইন ইন
             </button>
@@ -44,9 +45,11 @@ const Header = () => {
             <button className="bg-red-600 text-white px-4 py-2 rounded-md text-sm hover:bg-red-700">
               সাইন আপ
             </button>
-          </div>
+          </div> */}
+          <Userinfo/>
         </div>
       </div>
+      {/* <Userinfo/> */}
       <NavLinks/>
     </header>
   );

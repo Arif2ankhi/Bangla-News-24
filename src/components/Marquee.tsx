@@ -10,7 +10,7 @@ const Marquee = async() => {
 const res = await fetch ('https://news-api-v2.vercel.app/api/news?limit=10')
 const data = await res.json();
 const headlines: Headlines[]= data.data;
-console.log(headlines);
+// console.log(headlines);
 
     return (
         <div className="bg-emerald-500 text-white">
