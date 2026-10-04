@@ -1,5 +1,6 @@
 import MarqueeText from "react-marquee-text"
 // import "MarqueeText/styles.css"
+import Link from "next/link";
 
 interface Headlines{
     id: string
@@ -18,10 +19,10 @@ console.log(headlines);
             <MarqueeText className="py-1 px-5"  direction="right" duration={15}>
 
                  {
-                headlines.map(h=> <span key={h.id}>
+                headlines.map(h=> <Link href={`/news/${h.id}`} key={h.id}>
                     <span>{h.title}</span>
                     <span className='mx-5'>•</span>
-                </span>)
+                </Link>)
             }
             </MarqueeText>
             

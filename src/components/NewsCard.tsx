@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface News {
     id:string;
@@ -12,6 +13,8 @@ interface News {
 const NewsCard = ({news}: {news:News}) => {
 
     return (
+      <Link href={`/news/${news.id}`}>
+      
         <div className="card bg-base-100 shadow-sm">
           <figure>
             <Image
@@ -29,6 +32,9 @@ const NewsCard = ({news}: {news:News}) => {
         
         
         </div>
+      
+      
+      </Link>
     );
 };
 

@@ -1,5 +1,6 @@
 import MainNews from "@/components/MainNews";
 import Marquee from "@/components/Marquee";
+import MostRead from "@/components/MostRead";
 import NewsCard from "@/components/NewsCard";
 // import Image from "next/image";
 
@@ -30,8 +31,8 @@ export default async function Home() {
 
   return (
     <div>
-      <Marquee />
-      <div className="grid grid-cols-3 container mx-auto">
+      
+      <div className="grid grid-cols-3 gap-5  mt-4">
         {/* {news section} */}
         <div className="bg-base-500 rounded-xl  col-span-2 ">
           <MainNews news={mainNews} />
@@ -55,7 +56,9 @@ export default async function Home() {
         </div>
 
         {/* {most read section} */}
-        <div className="bg-indigo-300 rounded-xl ml-2 col-span-1 "></div>
+        <div className="rounded-xl ml-2 col-span-1 ">
+          <MostRead/>
+        </div>
       </div>
     </div>
   );
