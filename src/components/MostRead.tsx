@@ -11,7 +11,7 @@ const MostRead = async () => {
   const data = await res.json();
 
   const news: MostReadnews[] = data.data;
-  console.log(news);
+  // console.log(news);
 
   return (
     <div className="card p-2 bg-base-200 border border-gray-300">

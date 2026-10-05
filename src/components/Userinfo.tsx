@@ -1,11 +1,12 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
+import Link from "next/link";
 import React from "react";
 
 const Userinfo = () => {
   const { data: session } = authClient.useSession();
   const user = session?.user;
-  console.log(user);
+//   console.log(user);
 
     const handleSignout = async() => {
 
@@ -31,13 +32,15 @@ const Userinfo = () => {
         </div>
       ) : (
         <div className="flex items-center gap-5">
+          <Link href={'/signin'}>
           <button className="text-sm text-gray-700 hover:text-red-600">
             সাইন ইন
-          </button>
-
+          </button></Link>
+            <Link href={'/signup'}>
           <button className="bg-red-600 text-white px-4 py-2 rounded-md text-sm hover:bg-red-700">
             সাইন আপ
           </button>
+          </Link>
         </div>
       )}
     </div>

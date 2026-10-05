@@ -12,7 +12,7 @@ interface News {
 }
 const MainNews = ({ news }: { news: News[] }) => {
   const [firstNews, ...otherNews] = news;
-  console.log(firstNews);
+  // console.log(firstNews);
 
   // const othernews = news.slice(1);
   // console.log(othernews);
