@@ -3,10 +3,17 @@ import { authClient } from "@/lib/auth-client";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from 'next/image';
+import { redirect } from "next/navigation";
 
 const ProfilePage = () => {
   const { data: session } = authClient.useSession();
   const user = session?.user;
+
+  if(!user){
+    redirect ('/signin')
+  }
+
+
   const [show, setShow] = useState(false);
 
   const handleUpdateProfile = async (e: React.SubmitEvent<HTMLElement>) => {

@@ -27,7 +27,7 @@ export default async function Home() {
   // console.log(sections);
 
   const otherScetions :IOtherSection[] = sections.slice(1);
-  console.log(otherScetions);
+  // console.log(otherScetions);
 
   return (
     <div>
