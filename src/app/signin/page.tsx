@@ -40,18 +40,14 @@ const SignInPage = () => {
   //     }
 
   const handleGoogleSignIn = async () => {
-  await authClient.signIn.social({
+    await authClient.signIn.social({
       provider: "google"
     });
-
- 
   };
   const handleGithubSignIn = async () => {
-     await authClient.signIn.social({
+    await authClient.signIn.social({
       provider: "github"
     });
-
- 
   };
 
   return (

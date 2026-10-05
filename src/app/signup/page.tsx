@@ -28,8 +28,8 @@ const SignUpPage = () => {
     }
 
     if (error) {
-      toast.error(error.message);
-      console.log(error);
+      toast.error(error.message as string );
+    //   console.log?(error);
     }
   };
 
@@ -37,14 +37,11 @@ const SignUpPage = () => {
     await authClient.signIn.social({
       provider: "google"
     });
-
-
   };
   const handleGithubSignIn = async () => {
     await authClient.signIn.social({
       provider: "github"
     });
-
   };
 
   return (
