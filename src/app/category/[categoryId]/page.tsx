@@ -1,4 +1,6 @@
 import NewsCard from "@/components/NewsCard";
+import {notFound} from "next/navigation"
+
 interface News {
   id: string;
   title: string;
@@ -18,6 +20,10 @@ const CategoryNews = async ({ params }: { params: { categoryId: string } }) => {
 
   const data = await res.json();
   const categoryNews: News[] = data.data;
+
+  if(!categoryNews){
+      notFound()
+    }
 
   return (
     <div>

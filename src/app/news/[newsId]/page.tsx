@@ -1,4 +1,5 @@
 import Image from "next/image";
+import {notFound} from "next/navigation"
 interface News {
     id: string;
     title: string;
@@ -15,17 +16,21 @@ const NewsDetails = async ({ params }: { params:
     `https://news-api-v2.vercel.app/api/article/${newsId}`
   );
   const data = await res.json();
-  const news :News = data.data;
+  const news:News = data.data;
+
+  if(!news){
+    notFound()
+  }
 
   console.log(news);
   return (
     <div>
       <h1 className="font-bold text-2xl mb-3">{news.title}</h1>
-      <Image
+      {/* <Image
        height={500}
         width={800}
         src={news.imageUrl} 
-        alt={news.imageAlt} />
+        alt={news.imageAlt} /> */}
         <p className="mt-3">{news.text}</p>
     </div>
   );

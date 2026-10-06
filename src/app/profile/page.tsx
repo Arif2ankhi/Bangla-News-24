@@ -9,9 +9,9 @@ const ProfilePage = () => {
   const { data: session } = authClient.useSession();
   const user = session?.user;
 
-  if(!user){
-    redirect ('/signin')
-  }
+  // if(!user){
+  //   redirect ('/signin')
+  // }
 
 
   const [show, setShow] = useState(false);

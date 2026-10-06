@@ -14,7 +14,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
         
          
-            <div className="flex  gap-3 ml-100">
+            <div className="flex  gap-3 ml-80">
             <div className="w-10 h-10 bg-gray-900 rounded-xl flex items-center justify-center">
               <Image
                 src="/logo.webp"
